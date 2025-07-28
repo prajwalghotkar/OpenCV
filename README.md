@@ -35,9 +35,9 @@
 
 ***17) Object Detection and Tracking***
 
--- 
+--- 
 
-## 1) What is an image:
+# 1) What is an image:
 
 #### **An image is a two-dimensional array (matrix) of pixels, where each pixel represents a color or intensity value.**
 ##### - In grayscale images, each pixel is a single value from 0 (black) to 255 (white).
@@ -94,12 +94,17 @@
 #### - Use case: Used in image normalization, mathematical operations, and filters.
 #### - Range: Often between 0.0 and 1.0 or other custom ranges.
 
---
-## 2) Reading an image:
+---
+# 2) Reading an image:
 
 <img width="1920" height="979" alt="Screenshot 2025-07-28 121521" src="https://github.com/user-attachments/assets/8d2672f6-53c8-45ed-ab61-54cd0ec7ab54" />
 <img width="1920" height="997" alt="Screenshot 2025-07-28 125135" src="https://github.com/user-attachments/assets/7b404fb7-5fa7-40b7-aa65-c81bac81270b" />
 <img width="1920" height="983" alt="Screenshot 2025-07-28 125250" src="https://github.com/user-attachments/assets/b2a9e01b-4fcc-41ff-87ad-76413dff47e5" />
+
+https://github.com/prajwalghotkar/OpenCV/blob/main/prajwal_main.py
+
+---
+#  3) Converting it to grayscale:
 
 
 
