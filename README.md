@@ -1,4 +1,5 @@
 # OpenCV
+--
 
 ***1) What is an image*** 
 
@@ -34,4 +35,10 @@
 
 ***17) Object Detection and Tracking***
 
-  
+-- 
+
+## 1) What is an image:
+
+#### **An image is a two-dimensional array (matrix) of pixels, where each pixel represents a color or intensity value.**
+##### - In grayscale images, each pixel is a single value from 0 (black) to 255 (white).
+##### - In colored images (RGB/BGR), each pixel is a combination of three values (Red, Green, and Blue or Blue, Green, and Red), each ranging from 0 to 255.
