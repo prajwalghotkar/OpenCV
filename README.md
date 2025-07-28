@@ -94,7 +94,8 @@
 #### - Use case: Used in image normalization, mathematical operations, and filters.
 #### - Range: Often between 0.0 and 1.0 or other custom ranges.
 
-## 2) Reading an image
+--
+## 2) Reading an image:
 
 <img width="1920" height="979" alt="Screenshot 2025-07-28 121521" src="https://github.com/user-attachments/assets/8d2672f6-53c8-45ed-ab61-54cd0ec7ab54" />
 <img width="1920" height="997" alt="Screenshot 2025-07-28 125135" src="https://github.com/user-attachments/assets/7b404fb7-5fa7-40b7-aa65-c81bac81270b" />
