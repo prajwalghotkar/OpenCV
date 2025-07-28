@@ -4,7 +4,7 @@
 
 ***2) Reading an image*** 
 
-***3)Converting it to grayscale***
+***3) Converting it to grayscale***
 
 ***4) Playing with RGB color channels***
 
