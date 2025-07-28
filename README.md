@@ -106,6 +106,15 @@ https://github.com/prajwalghotkar/OpenCV/blob/main/prajwal_main.py
 ---
 #  3) Converting it to grayscale:
 
+<img width="1920" height="983" alt="Screenshot 2025-07-28 131241" src="https://github.com/user-attachments/assets/588b785c-151d-4cc0-9ee2-39d9f4253c70" />
+<img width="1920" height="998" alt="Screenshot 2025-07-28 131356" src="https://github.com/user-attachments/assets/c3b8d8b2-2a0b-4c0f-9916-b4826f694483" />
+<img width="1920" height="990" alt="Screenshot 2025-07-28 131545" src="https://github.com/user-attachments/assets/6503d41f-592c-47bd-92a6-e858806d740c" />
+<img width="1920" height="1000" alt="Screenshot 2025-07-28 131954" src="https://github.com/user-attachments/assets/ba093396-f064-423c-b3d1-c33c5b70904b" />
+
+
+
+
+
 
 
 
