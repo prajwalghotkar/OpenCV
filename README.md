@@ -111,6 +111,8 @@ https://github.com/prajwalghotkar/OpenCV/blob/main/prajwal_main.py
 <img width="1920" height="990" alt="Screenshot 2025-07-28 131545" src="https://github.com/user-attachments/assets/6503d41f-592c-47bd-92a6-e858806d740c" />
 <img width="1920" height="1000" alt="Screenshot 2025-07-28 131954" src="https://github.com/user-attachments/assets/ba093396-f064-423c-b3d1-c33c5b70904b" />
 
+https://github.com/prajwalghotkar/OpenCV/blob/main/prajwal_main.py
+
 
 
 
