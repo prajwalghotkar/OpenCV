@@ -135,24 +135,24 @@ https://github.com/prajwalghotkar/OpenCV/blob/main/prajwal_main.py
 ---
 
 # 4) Playing with RGB color channels
----
+
 #### Playing with RGB Color Channels: The RGB color model is a core concept in computer graphics, image processing, and display technology. It's an additive color model, meaning colors are created by combining light of three primary colors: Red (R), Green (G), and Blue (B). Understanding how these channels work is crucial for anyone interested in image manipulation, digital art, or programming for screens.https://en.wikipedia.org/wiki/RGB_color_model,https://en.wikipedia.org/wiki/Channel_(digital_image)
 ---
 #### 1. What Are RGB Color Channels?
----
+
 #####  - Channel refers to a separate grayscale image for each primary color: one for red, one for green, one for blue.
 #####  - When combined, these channels form a full-color image in the RGB color model.
 #####  - Each channel contains values representing the intensity of that color at every pixel.
 ---
 #### 2. Bit-Depth and Range
----
+
 #####  - In standard 24-bit RGB images (the industry norm), each channel is represented by 8 bits.
 #####  -- This allows intensity values from 0 (no color) to 255 (full intensity) per channel.
 #####  -- So, a color is represented as (R, G, B), e.g., (255, 0, 0) for pure red.
 #####  - Higher-end images may use 16 bits per channel (48-bit RGB), giving even greater precision.
 ---
 #### 3. How Colors Are Formed
----
+
 ##### - Each pixel in an RGB image has three values (R, G, B), each ranging from 0 to 255.
 ##### - The combination of these values produces a specific color.
 ##### -- (255, 255, 255) = white
@@ -163,34 +163,34 @@ https://github.com/prajwalghotkar/OpenCV/blob/main/prajwal_main.py
 ##### -- Mixed values create millions of unique colors: 256×256×256=16,777,216, far more than the human eye can distinguish.
 ---
 #### 4. Practical Example: Isolating Channels
----
+
 ##### - Isolating a channel means displaying only the intensity of that color for every pixel, setting others to zero.
 ##### -- For the red channel, only the red intensity is shown; green and blue are zeroed.
 ##### - In Python (e.g., using NumPy or PIL), this would look like:
----
+
 python
 r = image[:,:,0]
 g = image[:,:,1]
 b = image[:,:,2]
 ##### To visualize, set other channels to zero
 red_image = np.stack([r, np.zeros_like(r), np.zeros_like(r)], axis=2)
----
+
 ##### - This helps you understand how each individual color contributes to the full image.
 ---
 #### 5. Applications of RGB Channel Manipulation
----
+
 ##### - Image editing: Adjusting a single channel can alter image color balance, highlight specific elements, or create artistic effects.
 ##### - Machine learning: Feature extraction from different channels improves detection and classification.
 ##### - Image compression: Sometimes channels are treated or compressed differently based on visual importance.
 ##### - Visualization: Visualizing individual channels helps understand image structure and color composition.
 ---
 #### 6. Device Dependence
---
+
 ##### - RGB is device-dependent: Different screens may render the same RGB values slightly differently due to hardware variation in how light is displayed.
 ##### - Printers do not use RGB but instead rely on CMYK (Cyan, Magenta, Yellow, Black) because they use inks, not light
 ---
 #### 7. Quick Channel Reference Table
----
+
 <img width="367" height="262" alt="image" src="https://github.com/user-attachments/assets/abbab86e-0ed3-4fb0-a72a-2b7c745bff40" />
 
 <img width="1920" height="994" alt="Screenshot 2025-07-29 123648" src="https://github.com/user-attachments/assets/fb8ef951-c7c8-4b19-96b4-c6fdb33c3e7c" />
@@ -198,8 +198,41 @@ red_image = np.stack([r, np.zeros_like(r), np.zeros_like(r)], axis=2)
 <img width="1920" height="1015" alt="Screenshot 2025-07-29 123749" src="https://github.com/user-attachments/assets/7b7e8104-c65a-4b04-b6c0-7cf90b79d2bc" />
 <img width="1920" height="1018" alt="Screenshot 2025-07-29 133131" src="https://github.com/user-attachments/assets/d56929f4-420e-4e2d-a2ae-65a4dee8077a" />
 
+---
+#### Image Resizing
 
+##### Image resizing is a fundamental operation in image processing, computer vision, and machine learning workflows. In OpenCV, it's performed with the cv2.resize() function. Here’s a detailed breakdown suitable for your GitHub documentation:
 
+##### What Is Image Resizing?
+- Image resizing changes the dimensions (width and height) of an input image.
+- It can be used to scale images up (enlarge) or down (shrink), depending on the target size.
 
+##### Why Resize Images?
+- **Standardization**: Many algorithms and models (like neural networks) require images of a fixed size for consistent input.
+- **Efficiency**: Smaller images reduce computation time and memory usage.
+- **Visualization**: Making large images smaller for web or app display, or enlarging thumbnails for previews.
 
+```
+python
+import cv2
+import numpy as np
 
+img = cv2.imread("image/praajwal.png")  # Read an image
+img_resize = cv2.resize(img, (256, 256))  # Resize image
+print(img_resize.shape)
+cv2.imshow('prajwal_image', img_resize)
+cv2.waitKey(0)
+```
+##### - Parameters:
+
+- **img**: The input image (as a NumPy array).
+- **(256, 256)**: The new size in pixels as a tuple `(width, height)`.
+
+##### How It Works
+
+###### Interpolation: Resizing requires recalculating pixel values.
+- **Shrinking**: Combines information from several pixels into one (risk of information loss).
+- **Enlarging**: Computes new pixels based on neighbors (can lead to blurring).
+###### OpenCV offers several interpolation methods (like cv2.INTER_LINEAR, cv2.INTER_NEAREST, etc.), each affecting the result’s sharpness and quality.
+
+<img width="1920" height="1003" alt="Screenshot 2025-07-29 134834" src="https://github.com/user-attachments/assets/bbb84443-0820-4f33-8e29-3e1ab857f74d" />
