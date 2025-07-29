@@ -249,16 +249,16 @@ cv2.waitKey(0)
 - **Visualization**: Quickly view how an image looks from a different perspective.
 
 ##### The OpenCV Flip Function :
-'''
+```
 flipped_img = cv2.flip(src, flipCode)
-'''
+```
 
 ##### src: The input image (NumPy array).
 ##### flipCode: Integer specifying the axis:
 
 - **0** = Flip vertically (up/down, around the x-axis)
 
-'''
+```
 import cv2
 import numpy as np
 # Read an image
@@ -268,15 +268,14 @@ img_flip = cv2.flip(img,0)
 final_img_flip=cv2.resize(img_flip,(256,256))
 cv2.imshow('Airplan_image',final_img_flip)
 cv2.waitKey(0)
-
-'''
+```
 <img width="1920" height="1013" alt="Screenshot 2025-07-29 143236" src="https://github.com/user-attachments/assets/080de9fa-4f57-4425-a4ef-3b27773a1c82" />
 
 ---
 
 - **1** = Flip horizontally (left/right, around the y-axis)
 
-'''
+```
 import cv2
 import numpy as np
 # Read an image
@@ -286,13 +285,14 @@ img_flip = cv2.flip(img,1)
 final_img_flip=cv2.resize(img_flip,(256,256))
 cv2.imshow('Airplan_image',final_img_flip)
 cv2.waitKey(0)
-'''
+```
 <img width="1920" height="1005" alt="Screenshot 2025-07-29 143548" src="https://github.com/user-attachments/assets/04c00bc7-14be-49a9-b8ff-277e6da929c8" />
 
 ---
+
 - **-1** = Flip both vertically and horizontally (180-degree rotation)
 
-'''
+```
 import cv2
 import numpy as np
 # Read an image
@@ -302,6 +302,5 @@ img_flip = cv2.flip(img,-1)
 final_img_flip=cv2.resize(img_flip,(256,256))
 cv2.imshow('cat_image',final_img_flip)
 cv2.waitKey(0)
-
-'''
+```
 <img width="1920" height="988" alt="Screenshot 2025-07-29 143910" src="https://github.com/user-attachments/assets/fc866f7d-5092-45ce-ab29-a05d774bc807" />
