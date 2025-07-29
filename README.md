@@ -106,7 +106,16 @@ https://github.com/prajwalghotkar/OpenCV/blob/main/prajwal_main.py
 ---
 #  3) Converting it to grayscale:
 
-C:\Users\pmgho\image_processing_by_prajwal\prajwal_main.py
+#### > code:
+import cv2
+import numpy as np
+img = cv2.imread("image/prajwal.png.jpg") # Read an image
+img = cv2.imread("image/cat.png")
+img = cv2.imread("image/Airplane-2.png")
+img = cv2.imread("image/fruits.png")
+img_gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+cv2.imshow("prajwal_data_image_reading",img_gray) # Converting it to grayscale
+cv2.waitKey(0)
 
 <img width="1920" height="983" alt="Screenshot 2025-07-28 131241" src="https://github.com/user-attachments/assets/588b785c-151d-4cc0-9ee2-39d9f4253c70" />
 <img width="1920" height="998" alt="Screenshot 2025-07-28 131356" src="https://github.com/user-attachments/assets/c3b8d8b2-2a0b-4c0f-9916-b4826f694483" />
