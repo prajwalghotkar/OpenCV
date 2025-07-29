@@ -193,7 +193,10 @@ red_image = np.stack([r, np.zeros_like(r), np.zeros_like(r)], axis=2)
 ---
 <img width="367" height="262" alt="image" src="https://github.com/user-attachments/assets/abbab86e-0ed3-4fb0-a72a-2b7c745bff40" />
 
-
+<img width="1920" height="994" alt="Screenshot 2025-07-29 123648" src="https://github.com/user-attachments/assets/fb8ef951-c7c8-4b19-96b4-c6fdb33c3e7c" />
+<img width="1920" height="1005" alt="Screenshot 2025-07-29 124312" src="https://github.com/user-attachments/assets/479838c3-a067-4480-9f0e-73e551ab523a" />
+<img width="1920" height="1015" alt="Screenshot 2025-07-29 123749" src="https://github.com/user-attachments/assets/7b7e8104-c65a-4b04-b6c0-7cf90b79d2bc" />
+<img width="1920" height="1018" alt="Screenshot 2025-07-29 133131" src="https://github.com/user-attachments/assets/d56929f4-420e-4e2d-a2ae-65a4dee8077a" />
 
 
 
