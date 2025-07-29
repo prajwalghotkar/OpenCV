@@ -189,25 +189,17 @@ red_image = np.stack([r, np.zeros_like(r), np.zeros_like(r)], axis=2)
 ##### - RGB is device-dependent: Different screens may render the same RGB values slightly differently due to hardware variation in how light is displayed.
 ##### - Printers do not use RGB but instead rely on CMYK (Cyan, Magenta, Yellow, Black) because they use inks, not light
 
-#### 7. Quick Channel Reference Table
---
-#####    Color	  R	         G	     B	     Description
+Color	R	G	B	Description
+Black	0	0	0	All channels off
+White	255	255	255	All maxed out
+Red	255	0	0	Max red
+Green	0	255	0	Max green
+Blue	0	0	255	Max blue
+Yellow	255	255	0	Red + Green
+Magenta	255	0	255	Red + Blue
+Cyan	0	255	255	Green + Blue
+<img width="367" height="262" alt="image" src="https://github.com/user-attachments/assets/abbab86e-0ed3-4fb0-a72a-2b7c745bff40" />
 
-######   Black	  0	         0	     0	     All channels off
-
-######   White	 255	      255	    255	     All maxed out
-
-######   Red	   255	       0	     0	     Max red
-
-######   Green	  0	        255	     0	     Max green
-
-######   Blue	    0	         0	    255	     Max blue
-
-######   Yellow	 255	      255	     0	     Red + Green
-
-######   Magenta	255	       0	    255	     Red + Blue
-
-######   Cyan	    0	        255	    255      Green + Blue
 
 
 
