@@ -172,7 +172,7 @@ python
 r = image[:,:,0]
 g = image[:,:,1]
 b = image[:,:,2]
-# To visualize, set other channels to zero
+##### To visualize, set other channels to zero
 red_image = np.stack([r, np.zeros_like(r), np.zeros_like(r)], axis=2)
 
 ##### - This helps you understand how each individual color contributes to the full image.
