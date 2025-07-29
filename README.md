@@ -106,6 +106,8 @@ https://github.com/prajwalghotkar/OpenCV/blob/main/prajwal_main.py
 ---
 #  3) Converting it to grayscale:
 
+C:\Users\pmgho\image_processing_by_prajwal\prajwal_main.py
+
 <img width="1920" height="983" alt="Screenshot 2025-07-28 131241" src="https://github.com/user-attachments/assets/588b785c-151d-4cc0-9ee2-39d9f4253c70" />
 <img width="1920" height="998" alt="Screenshot 2025-07-28 131356" src="https://github.com/user-attachments/assets/c3b8d8b2-2a0b-4c0f-9916-b4826f694483" />
 <img width="1920" height="990" alt="Screenshot 2025-07-28 131545" src="https://github.com/user-attachments/assets/6503d41f-592c-47bd-92a6-e858806d740c" />
@@ -113,7 +115,9 @@ https://github.com/prajwalghotkar/OpenCV/blob/main/prajwal_main.py
 
 https://github.com/prajwalghotkar/OpenCV/blob/main/prajwal_main.py
 
+---
 
+# 4) Playing with RGB color channels
 
 
 
