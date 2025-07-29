@@ -199,7 +199,7 @@ red_image = np.stack([r, np.zeros_like(r), np.zeros_like(r)], axis=2)
 <img width="1920" height="1018" alt="Screenshot 2025-07-29 133131" src="https://github.com/user-attachments/assets/d56929f4-420e-4e2d-a2ae-65a4dee8077a" />
 
 ---
-# Image Resizing
+# 5) Image Resizing
 
 ##### Image resizing is a fundamental operation in image processing, computer vision, and machine learning workflows. In OpenCV, it's performed with the cv2.resize() function. Here’s a detailed breakdown suitable for your GitHub documentation:
 
