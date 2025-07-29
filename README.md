@@ -304,3 +304,68 @@ cv2.imshow('cat_image',final_img_flip)
 cv2.waitKey(0)
 ```
 <img width="1920" height="988" alt="Screenshot 2025-07-29 143910" src="https://github.com/user-attachments/assets/fc866f7d-5092-45ce-ab29-a05d774bc807" />
+---
+
+# 7) Cropping:
+##### Image cropping in OpenCV is the process of extracting a specific region from an image by specifying its pixel boundaries. This is a vital operation in image processing for focusing on areas of interest, removing unnecessary parts, or preparing images for further analysis.
+
+##### Why Crop Images?
+- **Highlight Regions of Interest**: Focus on a subject or important area.
+- **Remove Unwanted Areas**: Eliminate backgrounds, logos, or artifacts.
+- **Data Preparation**: Create consistent input dimensions for machine learning or computer vision tasks.
+
+##### Cropping in OpenCV
+- ***OpenCV does not provide a dedicated cropping function. Instead, you crop images using NumPy array slicing, since images in OpenCV (Python) are represented as NumPy arrays.***
+
+```
+import cv2
+import numpy as np
+# Read an image
+img = cv2.imread("image/Airplane-2.png")
+# cropping
+img_crop =img[100:300,200:500]
+cv2.imshow('Airplane_image',img_crop)
+cv2.waitKey(0)
+```
+<img width="1920" height="1013" alt="Screenshot 2025-07-29 190200" src="https://github.com/user-attachments/assets/81976bf6-3f08-428a-bdb1-f265b2495c01" />
+
+---
+# Saving using imwrite:
+
+##### Saving Images Using cv2.imwrite() in OpenCV: Description for GitHub Documentation Image saving is a critical step in image processing workflows, allowing you to write processed or generated images from memory to storage devices such as your hard drive. OpenCV provides the cv2.imwrite() function to save images in various file formats simply and efficiently.
+
+##### What is cv2.imwrite()?
+
+- cv2.imwrite() saves an image stored as a NumPy array to a specified file.
+- The image format is automatically determined by the filename’s extension (e.g., .jpg, .png, .bmp).
+- It works primarily with 8-bit single-channel (grayscale) or 3-channel (color, BGR order) images.
+- Returns True if the image is saved successfully; otherwise, it returns False.
+
+##### Why Save Images?
+- **Persist results**: Save your processed images for later use, sharing, or documentation.
+- **Data storage**: Store modified images after applying filters, resizing, cropping, or other transformations.
+- **Experiment tracking**: Keep a historical record of outputs and augment datasets.
+- **Integration**: Prepare images for external applications or web display in standard formats.
+
+```
+Syntax:
+cv2.imwrite(filename, image, params=None)
+```
+
+- **filename**: String representing the path and file name to save the image, including extension to specify format.
+- **image**: Image data as a NumPy array, typically obtained from OpenCV functions or image processing steps.
+- **params (optional)**: Format-specific parameters like compression level (e.g., JPEG quality), passed as a list of pairs.
+
+```
+import cv2
+import numpy as np
+# Read an image
+img = cv2.imread("image/cat.png")
+img_crop=img[0:300,0:300]
+# Save the image in png format
+cv2.imwrite('cat_small.png', img_crop)
+cv2.imshow('cat_image',img_crop)
+cv2.waitKey(0)
+
+```
+
