@@ -199,7 +199,7 @@ red_image = np.stack([r, np.zeros_like(r), np.zeros_like(r)], axis=2)
 <img width="1920" height="1018" alt="Screenshot 2025-07-29 133131" src="https://github.com/user-attachments/assets/d56929f4-420e-4e2d-a2ae-65a4dee8077a" />
 
 ---
-#### Image Resizing
+# Image Resizing
 
 ##### Image resizing is a fundamental operation in image processing, computer vision, and machine learning workflows. In OpenCV, it's performed with the cv2.resize() function. Here’s a detailed breakdown suitable for your GitHub documentation:
 
@@ -236,3 +236,72 @@ cv2.waitKey(0)
 ###### OpenCV offers several interpolation methods (like cv2.INTER_LINEAR, cv2.INTER_NEAREST, etc.), each affecting the result’s sharpness and quality.
 
 <img width="1920" height="1003" alt="Screenshot 2025-07-29 134834" src="https://github.com/user-attachments/assets/bbb84443-0820-4f33-8e29-3e1ab857f74d" />
+
+---
+
+# 6) Flipping:
+
+##### Image flipping in OpenCV is the process of reversing an image along a particular axis, effectively creating a mirror image, turning it upside down, or both. This operation is performed with the cv2.flip() function and is widely used for data augmentation, visualization, or correcting image orientation.
+
+##### Why Flip Images?
+- **Augmentation**: Flipping images can help expand datasets for machine learning, making models more robust.
+- **Correction**: Fix images that are mirrored or upside down.
+- **Visualization**: Quickly view how an image looks from a different perspective.
+
+##### The OpenCV Flip Function :
+'''
+flipped_img = cv2.flip(src, flipCode)
+'''
+
+##### src: The input image (NumPy array).
+##### flipCode: Integer specifying the axis:
+
+- **0** = Flip vertically (up/down, around the x-axis)
+
+'''
+import cv2
+import numpy as np
+# Read an image
+img = cv2.imread("image/Airplane-2.png")
+# Flipping
+img_flip = cv2.flip(img,0)
+final_img_flip=cv2.resize(img_flip,(256,256))
+cv2.imshow('Airplan_image',final_img_flip)
+cv2.waitKey(0)
+
+'''
+<img width="1920" height="1013" alt="Screenshot 2025-07-29 143236" src="https://github.com/user-attachments/assets/080de9fa-4f57-4425-a4ef-3b27773a1c82" />
+
+---
+
+- **1** = Flip horizontally (left/right, around the y-axis)
+
+'''
+import cv2
+import numpy as np
+# Read an image
+img = cv2.imread("image/Airplane-2.png")
+# Flipping
+img_flip = cv2.flip(img,1)
+final_img_flip=cv2.resize(img_flip,(256,256))
+cv2.imshow('Airplan_image',final_img_flip)
+cv2.waitKey(0)
+'''
+<img width="1920" height="1005" alt="Screenshot 2025-07-29 143548" src="https://github.com/user-attachments/assets/04c00bc7-14be-49a9-b8ff-277e6da929c8" />
+
+---
+- **-1** = Flip both vertically and horizontally (180-degree rotation)
+
+'''
+import cv2
+import numpy as np
+# Read an image
+img = cv2.imread("image/cat.png")
+# Flipping
+img_flip = cv2.flip(img,-1)
+final_img_flip=cv2.resize(img_flip,(256,256))
+cv2.imshow('cat_image',final_img_flip)
+cv2.waitKey(0)
+
+'''
+<img width="1920" height="988" alt="Screenshot 2025-07-29 143910" src="https://github.com/user-attachments/assets/fc866f7d-5092-45ce-ab29-a05d774bc807" />
