@@ -135,22 +135,22 @@ https://github.com/prajwalghotkar/OpenCV/blob/main/prajwal_main.py
 ---
 
 # 4) Playing with RGB color channels
-
+---
 #### Playing with RGB Color Channels: The RGB color model is a core concept in computer graphics, image processing, and display technology. It's an additive color model, meaning colors are created by combining light of three primary colors: Red (R), Green (G), and Blue (B). Understanding how these channels work is crucial for anyone interested in image manipulation, digital art, or programming for screens.https://en.wikipedia.org/wiki/RGB_color_model,https://en.wikipedia.org/wiki/Channel_(digital_image)
-
+---
 #### 1. What Are RGB Color Channels?
 ---
 #####  - Channel refers to a separate grayscale image for each primary color: one for red, one for green, one for blue.
 #####  - When combined, these channels form a full-color image in the RGB color model.
 #####  - Each channel contains values representing the intensity of that color at every pixel.
-
+---
 #### 2. Bit-Depth and Range
 ---
 #####  - In standard 24-bit RGB images (the industry norm), each channel is represented by 8 bits.
 #####  -- This allows intensity values from 0 (no color) to 255 (full intensity) per channel.
 #####  -- So, a color is represented as (R, G, B), e.g., (255, 0, 0) for pure red.
 #####  - Higher-end images may use 16 bits per channel (48-bit RGB), giving even greater precision.
-
+---
 #### 3. How Colors Are Formed
 ---
 ##### - Each pixel in an RGB image has three values (R, G, B), each ranging from 0 to 255.
@@ -161,34 +161,34 @@ https://github.com/prajwalghotkar/OpenCV/blob/main/prajwal_main.py
 ##### -- (0, 255, 0) = green
 ##### -- (0, 0, 255) = blue
 ##### -- Mixed values create millions of unique colors: 256×256×256=16,777,216, far more than the human eye can distinguish.
-
+---
 #### 4. Practical Example: Isolating Channels
 ---
 ##### - Isolating a channel means displaying only the intensity of that color for every pixel, setting others to zero.
 ##### -- For the red channel, only the red intensity is shown; green and blue are zeroed.
 ##### - In Python (e.g., using NumPy or PIL), this would look like:
-
+---
 python
 r = image[:,:,0]
 g = image[:,:,1]
 b = image[:,:,2]
 ##### To visualize, set other channels to zero
 red_image = np.stack([r, np.zeros_like(r), np.zeros_like(r)], axis=2)
-
+---
 ##### - This helps you understand how each individual color contributes to the full image.
-
+---
 #### 5. Applications of RGB Channel Manipulation
 ---
 ##### - Image editing: Adjusting a single channel can alter image color balance, highlight specific elements, or create artistic effects.
 ##### - Machine learning: Feature extraction from different channels improves detection and classification.
 ##### - Image compression: Sometimes channels are treated or compressed differently based on visual importance.
 ##### - Visualization: Visualizing individual channels helps understand image structure and color composition.
-
+---
 #### 6. Device Dependence
 --
 ##### - RGB is device-dependent: Different screens may render the same RGB values slightly differently due to hardware variation in how light is displayed.
 ##### - Printers do not use RGB but instead rely on CMYK (Cyan, Magenta, Yellow, Black) because they use inks, not light
-
+---
 #### 7. Quick Channel Reference Table
 ---
 <img width="367" height="262" alt="image" src="https://github.com/user-attachments/assets/abbab86e-0ed3-4fb0-a72a-2b7c745bff40" />
