@@ -543,7 +543,6 @@ cv2.destroyAllWindows()
 
 ```
 <img width="1920" height="1009" alt="Screenshot 2025-07-30 233527" src="https://github.com/user-attachments/assets/04064031-274f-4980-9d9f-141da671e288" />
-"C:\Users\pmgho\Videos\Screen Recordings\Screen Recording 2025-07-30 231848.mp4"
 
 - Press and hold the left mouse button to draw a rectangle.
 - Rectangle is shown dynamically as you drag.
