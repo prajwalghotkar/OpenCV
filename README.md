@@ -330,7 +330,7 @@ cv2.waitKey(0)
 <img width="1920" height="1013" alt="Screenshot 2025-07-29 190200" src="https://github.com/user-attachments/assets/81976bf6-3f08-428a-bdb1-f265b2495c01" />
 
 ---
-# Saving using imwrite:
+# 8) Saving using imwrite:
 
 ##### Saving Images Using cv2.imwrite() in OpenCV: Description for GitHub Documentation Image saving is a critical step in image processing workflows, allowing you to write processed or generated images from memory to storage devices such as your hard drive. OpenCV provides the cv2.imwrite() function to save images in various file formats simply and efficiently.
 
@@ -368,4 +368,143 @@ cv2.imshow('cat_image',img_crop)
 cv2.waitKey(0)
 
 ```
+---
+# 9) Drawing shapes (rectangles,circles,lines) and Texts:
 
+##### Drawing Shapes (Rectangles, Circles, Lines) and Texts in OpenCV: GitHub-Ready Guide OpenCV offers simple, powerful functions for drawing basic shapes and adding text directly on images. These drawing tools are essential for visualizing annotations, marking points of interest, or creating simple graphics for documentation and debugging.
+
+##### Why Draw on Images?
+- **Annotation**: Highlight regions, objects, or important features.
+- **Debugging**: Visualize steps in computer vision pipelines.
+- **Presentation**: Make results more understandable for others.
+
+##### Drawing a Rectangle
+- **Draw rectangles to highlight objects or areas**:
+```
+v2.rectangle(image, pt1, pt2, color, thickness)
+```
+
+- **image**: The target image (NumPy array).
+- **pt1**: Top-left corner (x1, y1).
+- **pt2**: Bottom-right corner (x2, y2).
+- **color**: Tuple in BGR format, e.g., (0, 255, 0) for green.
+- **thickness**: Border thickness (set -1 to fill the rectangle).
+
+```
+import cv2
+img = cv2.imread("image/cat.png")
+cv2.rectangle(img, (50, 40), (200, 180), (0, 255, 0), 2)
+```
+---
+##### Drawing a Circle
+###### Use circles for center-points or highlights:
+```
+cv2.circle(image, center, radius, color, thickness)
+```
+- **radius**: Circle’s radius in pixels.
+- **center**: (x, y) coordinates for the circle’s center.
+```
+import cv2
+import numpy as np
+# Create a black image
+img = np.zeros((512,512,3), dtype=np.uint8)
+# Circle
+cv2.circle(img, (100,400), 70, (0,0,255), -1)
+cv2.imshow('blue_rectangle',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+<img width="1920" height="1007" alt="Screenshot 2025-07-30 154914" src="https://github.com/user-attachments/assets/ad0a0360-e290-4f1b-9798-b8aa4d7015bf" />
+<img width="1920" height="1013" alt="Screenshot 2025-07-30 154842" src="https://github.com/user-attachments/assets/39459bb2-7f29-4da3-ba15-7cfca9d942ac" />
+
+---
+##### Drawing a Rectangle
+###### Draw rectangles to highlight objects or areas:
+```cv2.rectangle(image, pt1, pt2, color, thickness)```
+- **image**: The target image (NumPy array).
+- **pt1**: Top-left corner (x1, y1).
+- **pt2**: Bottom-right corner (x2, y2).
+- **color**: Tuple in BGR format, e.g., (0, 255, 0) for green.
+- **thickness**: Border thickness (set -1 to fill the rectangle).
+
+```
+import cv2
+import numpy as np
+# Create a black image
+img = np.zeros((512,512,3), dtype=np.uint8)
+# Rectangle
+cv2.rectangle(img, (100,100), (300,300), (255,0,0), -1)
+cv2.imshow('blue_rectangle',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+<img width="1920" height="1024" alt="Screenshot 2025-07-30 152527" src="https://github.com/user-attachments/assets/7ee5671c-ec1f-4c6a-b148-ec864a0413bb" />
+<img width="1920" height="1011" alt="Screenshot 2025-07-30 152616" src="https://github.com/user-attachments/assets/a10d6d6c-4835-45a2-a6d8-4f9189396d70" />
+
+---
+##### Drawing a Line
+###### To connect points (paths, axes):
+
+```
+cv2.line(image, pt1, pt2, color, thickness)
+```
+- **pt1**: Starting point.
+- **pt2**: Ending point.
+
+```
+import cv2
+import numpy as np
+# Create a black image
+img = np.zeros((512,512,3), dtype=np.uint8)
+# Line
+cv2.line(img, (0,0), (512,512), (0,255,0), 2)
+cv2.imshow('blue_rectangle',img)
+cv2.waitKey(0)
+```
+<img width="1920" height="998" alt="Screenshot 2025-07-30 155334" src="https://github.com/user-attachments/assets/99ad922a-2aec-497e-9c80-76fc4b0ed9ca" />
+
+---
+##### Adding Text
+###### Display information or labels on images:
+
+```
+cv2.putText(image, text, org, font, fontScale, color, thickness, lineType)
+```
+- **text**: String to draw.
+- **org**: Bottom-left corner of text (x, y).
+- **font**: Font type (e.g., cv2.FONT_HERSHEY_SIMPLEX).
+- **fontScale**: Multiplier for text size.
+- **color**: Text color in BGR.
+- **thickness**: Line thickness.
+
+```
+import cv2
+import numpy as np
+# Create a black image
+img = np.zeros((512,512,3), dtype=np.uint8)
+# Rectangle
+cv2.rectangle(img, (100,100), (300,300), (255,0,0), -1)
+# Circle
+cv2.circle(img, (100,400), 70, (0,0,255), -1)
+# Line
+cv2.line(img, (0,0), (512,512), (0,255,0), 2)
+# Text
+cv2.putText(img, 
+    'Hello Prajwal Ghotkar', 
+    (100,100), 
+    cv2.FONT_ITALIC, 
+    4, 
+    (0,255,255), 
+    2, 
+    cv2.LINE_AA
+)
+cv2.imshow('blue_rectangle',img)
+cv2.waitKey(0)
+```
+<img width="1920" height="1017" alt="Screenshot 2025-07-30 162755" src="https://github.com/user-attachments/assets/d0220d64-66c0-424e-9eca-04d88d2dee07" />
+
+##### Common Applications
+- Visualizing detections or predictions in object detection and tracking.
+- Annotating datasets or creating teaching material.
+- Debugging coordinate and area calculations.
