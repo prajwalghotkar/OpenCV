@@ -509,4 +509,54 @@ cv2.waitKey(0)
 - Annotating datasets or creating teaching material.
 - Debugging coordinate and area calculations.
 ---
-##### Live Direct Drawing:
+# 10) Live Direct Drawing:
+##### Live Direct Drawing in OpenCV: Interactive Drawing with the Mouse Live direct drawing in OpenCV refers to capturing user interaction (usually mouse events) in real time, allowing the user to draw shapes directly onto a displayed window. This is a common feature for annotation tools, prototyping, or simple paint-style applications.
+
+###### Why Use Live Drawing?
+- **Interactive annotation**: Mark regions of interest on frames or live video.
+- **Data labeling**: Quick drawing over images for dataset creation.
+- **Creative applications**: Build live sketch or paint tools in Python.
+
+###### How Live Drawing Works
+- OpenCV can track mouse events (click, drag, release) in a window using cv2.setMouseCallback.
+- The program updates the displayed image based on current mouse position and drawing actions in real time.
+
+```
+import cv2
+import numpy as np
+
+# Mouse callback function
+def draw(event, x, y, flags, param):
+    if event == 1:
+        cv2.circle(img,center=(x,y),radius=50,color=(0,0,255),thickness=-1)
+
+cv2.namedWindow("window")
+cv2.setMouseCallback("window", draw)
+
+img = np.zeros((512,512,3), dtype=np.uint8)
+
+while True:
+    cv2.imshow("window", img)
+    if cv2.waitKey(1) & 0xFF == ord('x'):
+        break
+cv2.destroyAllWindows()
+
+```
+<img width="1920" height="1009" alt="Screenshot 2025-07-30 233527" src="https://github.com/user-attachments/assets/04064031-274f-4980-9d9f-141da671e288" />
+"C:\Users\pmgho\Videos\Screen Recordings\Screen Recording 2025-07-30 231848.mp4"
+
+- Press and hold the left mouse button to draw a rectangle.
+- Rectangle is shown dynamically as you drag.
+- Release the button to finalize the rectangle.
+
+##### Additional Applications
+- Draw lines, circles, or freehand curves by extending the mouse event logic.
+- Combine with webcam frames (cv2.VideoCapture) for live annotation on video.
+- Add keyboard controls to switch drawing modes or save results.
+
+##### Workflow
+- Display image or frame in a window.
+- Listen for real-time mouse events/clicks.
+- Draw/update shapes on mouse move and finalize on release.
+- Show updates instantly in the window.
+--- 
