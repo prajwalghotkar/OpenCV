@@ -665,3 +665,31 @@ cv2.destroyAllWindows()
 <img width="1920" height="1011" alt="Screenshot 2025-07-31 015615" src="https://github.com/user-attachments/assets/d83f9bb8-ee3c-4abe-81e3-2795845edc39" />
 
 
+##### Reading and Displaying a Video File Using OpenCV in Python: 
+- This Python script uses OpenCV to open and display a video file named output.avi frame by frame.
+
+```
+import cv2
+import numpy as np
+
+cap = cv2.VideoCapture('output.avi')
+while True:
+    ret, frame = cap.read()
+    cv2.imshow(0.5)
+    cv2.imshow("Prajwal_Data",frame)
+
+    if cv2.waitKey(1) & 0xFF == ord('x'):
+        break
+cv2.destroyAllWindows()
+```
+
+##### Important Notes
+- The video frames are displayed as images in real-time sequentially, simulating video playback.
+- cap.read() returns False when reaching the end of the video, stopping the loop.
+- cv2.waitKey() controls the playback speed and can also be adjusted for smoother or slower viewing.
+- Pressing 'x' stops the loop and closes the program cleanly.
+
+##### Use Cases
+- Useful for video file playback, video processing, and frame analysis.
+- Foundation for building video editing, filtering, or object detection applications.
+- Enables visualization of results frame by frame during video processing pipelines.
