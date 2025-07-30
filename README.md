@@ -607,6 +607,30 @@ cv2.destroyAllWindows()
 ```
 <img width="1920" height="1009" alt="Screenshot 2025-07-31 002746" src="https://github.com/user-attachments/assets/bc5ef601-915a-4c96-b334-70304752ab89" />
 
+```
+import cv2
+import numpy as np
+
+cap = cv2.VideoCapture(0)
+
+while True:
+
+    ret , frame = cap.read()
+
+    img_gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
+
+    # img = cv2.cvtColor(frame)
+
+    cv2.imshow("Prajwal_Data",img_gray)
+
+    if cv2.waitKey(1) & 0xFF == ord('x'):
+        break
+cv2.destroyAllWindows()
+```
+
+<img width="1920" height="1020" alt="Screenshot 2025-07-31 012549" src="https://github.com/user-attachments/assets/89ddb863-2a6b-4594-9bc1-a2aeb61e0978" />
+<img width="1920" height="994" alt="Screenshot 2025-07-31 013517" src="https://github.com/user-attachments/assets/3108c0f7-7e86-46e5-ad4f-6136d7af6789" />
+
 ##### Common Use Cases
 - Basic webcam preview with reduced computational load.
 - Preprocessing step before applying computer vision algorithms.
