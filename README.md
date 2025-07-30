@@ -559,3 +559,56 @@ cv2.destroyAllWindows()
 - Draw/update shapes on mouse move and finalize on release.
 - Show updates instantly in the window.
 --- 
+# 12) Fetching webcam stream(in black and white)
+##### Fetching Webcam Stream in Black and White Using OpenCV: GitHub-Ready Guide Capturing live video from a webcam is a fundamental task in computer vision and image processing. With OpenCV, you can easily grab real-time frames from your webcam and convert them to black and white (grayscale) for various applications like edge detection, face recognition, or artistic effects.
+
+##### Why Capture Webcam Stream in Black and White?
+- Reduced Complexity: Grayscale images simplify processing by reducing color channels.
+- Faster Processing: Processing single channel images is computationally cheaper.
+- Many algorithms operate on grayscale images, making this format common in vision tasks.
+- Visual Clarity: Highlights contrast and structure without color distractions.
+
+```
+import cv2
+import numpy as np
+
+flag = False
+ix = -1
+iy = -1
+
+
+def draw(event, x, y, flags, param):
+
+global flag,ix,iy
+
+if event == 1:
+
+flag = True
+ix = x
+iy = y
+
+elif event == 0:
+if flag == True:
+cv2.rectangle(img, plt1=(ix,iy),pt2=(x,y),color=(0,255,255),thickness=-1)
+elif event == 4:
+
+flag = False
+cv2.rectangle(img, plt1=(ix, iy), pt2=(x, y), color=(0, 255, 255), thickness=-1)
+cv2.namedWindow("window")
+cv2.setMouseCallback("window", draw)
+
+img = np.zeros((512,512,3), dtype=np.uint8)
+
+while True:
+cv2.imshow("window", img)
+if cv2.waitKey(1) & 0xFF == ord('x'):
+break
+cv2.destroyAllWindows()
+```
+<img width="1920" height="1009" alt="Screenshot 2025-07-31 002746" src="https://github.com/user-attachments/assets/bc5ef601-915a-4c96-b334-70304752ab89" />
+
+# Common Use Cases
+- Basic webcam preview with reduced computational load.
+- Preprocessing step before applying computer vision algorithms.
+- Creating effect filters or live camera apps.
+- Monitoring or surveillance applications in monochrome.
