@@ -665,7 +665,7 @@ cv2.destroyAllWindows()
 <img width="1920" height="1011" alt="Screenshot 2025-07-31 015615" src="https://github.com/user-attachments/assets/d83f9bb8-ee3c-4abe-81e3-2795845edc39" />
 
 
-##### Reading and Displaying a Video File Using OpenCV in Python: 
+# Reading and Displaying a Video File Using OpenCV in Python: 
 - This Python script uses OpenCV to open and display a video file named output.avi frame by frame.
 
 ```
