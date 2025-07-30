@@ -607,7 +607,7 @@ cv2.destroyAllWindows()
 ```
 <img width="1920" height="1009" alt="Screenshot 2025-07-31 002746" src="https://github.com/user-attachments/assets/bc5ef601-915a-4c96-b334-70304752ab89" />
 
-# Common Use Cases
+##### Common Use Cases
 - Basic webcam preview with reduced computational load.
 - Preprocessing step before applying computer vision algorithms.
 - Creating effect filters or live camera apps.
