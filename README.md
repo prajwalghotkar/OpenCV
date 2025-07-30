@@ -508,3 +508,5 @@ cv2.waitKey(0)
 - Visualizing detections or predictions in object detection and tracking.
 - Annotating datasets or creating teaching material.
 - Debugging coordinate and area calculations.
+---
+##### Live Direct Drawing:
