@@ -636,3 +636,32 @@ cv2.destroyAllWindows()
 - Preprocessing step before applying computer vision algorithms.
 - Creating effect filters or live camera apps.
 - Monitoring or surveillance applications in monochrome.
+
+##### Capturing and Saving Webcam Stream Using OpenCV:
+- This code captures live video from your webcam, converts each frame to grayscale, displays it, and simultaneously writes the raw frames (in color) to a video file
+
+```
+import cv2
+import numpy as np
+
+cap = cv2.VideoCapture(0)
+write = cv2.VideoWriter_fourcc(*'XVID')
+out = cv2.VideoWriter('output.avi',fourcc,20.0,(600,480))
+while True:
+
+    ret , frame = cap.read()
+    out.write(frame)
+    img_gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
+
+    # img = cv2.cvtColor(frame)
+
+    cv2.imshow("Prajwal_Data",img_gray)
+
+    if cv2.waitKey(1) & 0xFF == ord('x'):
+        break
+out.release()
+cv2.destroyAllWindows()
+```
+<img width="1920" height="1011" alt="Screenshot 2025-07-31 015615" src="https://github.com/user-attachments/assets/d83f9bb8-ee3c-4abe-81e3-2795845edc39" />
+
+
